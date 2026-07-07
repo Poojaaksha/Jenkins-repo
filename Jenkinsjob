@@ -17,7 +17,7 @@ pipeline {
                 sh '''
                     echo "Building the application..."
                     pwd
-                    ls -l....
+                    ls -l
                 '''
             }
         }
@@ -29,3 +29,21 @@ pipeline {
                     echo "All tests passed."
                 '''
             }
+        }
+    }
+
+    post {
+        always {
+            echo "Pipeline completed."
+        }
+
+        success {
+            echo "Build Successful!"
+        }
+
+        failure {
+            echo "Build Failed!"
+        }
+    }
+}
+          
