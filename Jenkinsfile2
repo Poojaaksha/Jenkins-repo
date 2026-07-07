@@ -3,14 +3,10 @@ pipeline {
           label 'linux-node1'
      }
 
-    parameters {
-        string(name: 'NAME', defaultValue: 'Pooja')
-    }
-
     stages {
-        stage('Print Name') {
+        stage('Current User') {
             steps {
-                echo "${params.NAME}"
+                sh 'whoami'
             }
         }
     }
