@@ -4,22 +4,12 @@ pipeline {
       }
 
     stages {
-        stage('One') {
+        stage('Hostname') {
             steps {
-                echo 'Hello'
-            }
-        }
-
-        stage('Two') {
-            steps {
-                echo 'Welcome'
-            }
-        }
-
-        stage('Three') {
-            steps {
-                echo 'Jenkins'
+                sh 'hostname'
             }
         }
     }
 }
+ 
+
