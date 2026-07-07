@@ -4,9 +4,9 @@ pipeline {
      }
 
     stages {
-        stage('Working Directory') {
+        stage('List Files') {
             steps {
-                sh 'pwd'
+                sh 'ls -l'
             }
         }
     }
