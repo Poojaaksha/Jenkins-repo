@@ -4,9 +4,9 @@ pipeline {
      }
 
     stages {
-        stage('Date and Time') {
+        stage('Working Directory') {
             steps {
-                sh 'date'
+                sh 'pwd'
             }
         }
     }
