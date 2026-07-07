@@ -1,13 +1,12 @@
-
 pipeline {
     agent {
-         label 'linux-node1' 
+          label 'linux-node1'
      }
 
     stages {
-        stage('Hello World') {
+        stage('Date and Time') {
             steps {
-                echo 'Hello, Jenkins Pipeline!'
+                sh 'date'
             }
         }
     }
