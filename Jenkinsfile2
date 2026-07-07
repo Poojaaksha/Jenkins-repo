@@ -1,6 +1,8 @@
 
 pipeline {
-    agent linux-node1
+    agent {
+         label 'linux-node1' 
+     }
 
     stages {
         stage('Hello World') {
