@@ -2,25 +2,23 @@ pipeline {
     agent {
         label 'linux-node1'
       }
+
     stages {
-        stage('Checkout') {
+        stage('One') {
             steps {
-                echo 'Checkout'
+                echo 'Hello'
             }
         }
-        stage('Build') {
+
+        stage('Two') {
             steps {
-                echo 'Build'
+                echo 'Welcome'
             }
         }
-        stage('Test') {
+
+        stage('Three') {
             steps {
-                echo 'Test'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploy'
+                echo 'Jenkins'
             }
         }
     }
