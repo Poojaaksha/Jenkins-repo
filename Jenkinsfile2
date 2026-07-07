@@ -4,12 +4,10 @@ pipeline {
       }
 
     stages {
-        stage('Hostname') {
+        stage('Workspace') {
             steps {
-                sh 'hostname'
+                echo "${WORKSPACE}"
             }
         }
     }
 }
- 
-
