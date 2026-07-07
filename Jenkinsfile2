@@ -1,12 +1,11 @@
+
 pipeline {
-    agent {
-        label 'linux-node1'
-    }
+    agent linux-node1
 
     stages {
-        stage('Example Stage') {
+        stage('Hello World') {
             steps {
-                echo "Running on node: ${env.NODE_NAME}"
+                echo 'Hello, Jenkins Pipeline!'
             }
         }
     }
