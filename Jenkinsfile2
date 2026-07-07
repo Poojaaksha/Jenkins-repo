@@ -3,14 +3,14 @@ pipeline {
           label 'linux-node1'
      }
 
-    environment {
-        NAME = "Pooja"
+    parameters {
+        string(name: 'NAME', defaultValue: 'Pooja')
     }
 
     stages {
-        stage('Environment Variable') {
+        stage('Print Name') {
             steps {
-                echo "${NAME}"
+                echo "${params.NAME}"
             }
         }
     }
