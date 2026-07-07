@@ -9,5 +9,13 @@ pipeline {
                 sh 'whoami'
             }
         }
+     
+
+post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
     }
 }
+
+
